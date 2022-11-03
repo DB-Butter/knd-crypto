@@ -15,7 +15,7 @@ function Show() {
     }, [])
 
     console.log(store.data)
-    if (!store.data.name) return <>API Loading... <br/> <Link to="/">HOME</Link></>
+    if (!store.data.name) return <div className="api-load">API Loading... <br/> <Link to="/">HOME</Link></div>
   return (
     <div>
         <Header back />
