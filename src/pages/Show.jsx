@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import showStore from '../stores/showStore'
 import { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -15,7 +15,7 @@ function Show() {
     }, [])
 
     console.log(store.data)
-    if (!store.data.name) return <></>
+    if (!store.data.name) return <>API Loading... <br/> <Link to="/">HOME</Link></>
   return (
     <div>
         <Header back />
